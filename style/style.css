@@ -1,0 +1,63 @@
+@font-face {
+    font-family: Caveat;
+    src: url('../assets/fonts/Caveat-Regular.ttf');
+}
+
+@font-face {
+    font-family: MagazineLetter;
+    src: url('../assets/fonts/MagazineLetterByBrntlbrnl-Regular.ttf');
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #fff;
+
+}
+
+.nav-bar {
+    font-family: Caveat;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.menu-display {
+    display: none;
+}
+
+#burger-icon {
+    width: 45px;
+    cursor: pointer;
+}
+
+#name-title {
+    font-family: MagazineLetter;
+    font-size: 48px;
+    
+}
+
+#post-it {
+    width: 250px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    rotate: 20deg;
+}
+
+#photo-ordi {
+    height: 80vh;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
