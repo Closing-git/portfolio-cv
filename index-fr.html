@@ -10,8 +10,12 @@
 
 <body>
     <div class="nav-bar">
-        <a href="index-fr.html">Français</a> | <a href="index-en.html">English</a>
-        <img src="./assets/img/burger_icon.png" alt="Menu Burger" id="burger-icon">
+        <div class="langues-et-burger">
+            <div class="choix-langues">
+                <a id="langue-selectionne" href="index-fr.html">FR </a><span>|</span> <a href="index-en.html"> ENG</a>
+            </div>
+            <img src="./assets/img/burger_icon.png" alt="Menu Burger" id="burger-icon">
+        </div>
         <div class="menu-display">
             <p>About</p>
             <p>Skills</p>
@@ -20,25 +24,60 @@
             <p>Languages</p>
             <p>Interests</p>
         </div>
-        <h1 id="name-title">FERSING CHLOE</h1>
-        <h2 id="job-title">Full-stack developer</h2>
+        <h1 id="name-title">
+            <span>C</span>
+            <span>h</span>
+            <span>l</span>
+            <span>o</span>
+            <span>e</span>
+            &nbsp;
+            &nbsp;
+            <span>F</span>
+            <span>E</span>
+            <span>R</span>
+            <span>S</span>
+            <span>i</span>
+            <span>N</span>
+            <span>G</span>
+        </h1>
+        <h2 id="job-title">Full-stack Junior Développeuse</h2>
         <div class="post-it">
-            <img src="./assets/img/postit.png" alt="Post-it" id="post-it">
-            <div class="logos-post-it">
-                <!-- Icones linkedin, git, cv -->
-                <p>1</p>
-                <p>2</p>
-                <p>3</p>
+            <img src="./assets/img/post_it.png" alt="Post-it" id="post-it">
+            <div class="reseaux-sociaux">
+
+                <button id="btn-linkedin" onclick="window.open('http:\/\/www.linkedin.com/in/chloe-fersing', '_blank');"
+                    class="btn-reseaux " title="Linkedin"></button>
+                <button id="btn-git" onclick="window.open('http:\/\/www.github.com/Closing-git', '_blank');"
+                    class="btn-reseaux" title="Github"></button>
+                <button id="btn-CV" class="btn-reseaux" title="CV"></button>
             </div>
             <div class="ecrivez-moi">
-                <p>✉️</p>
-                <p>Contact me !</p>
+                <p>Écrivez-moi !</p>
+                <a id="btn-mail" href="mailto:chloe.fersing@yahoo.fr" title="M'envoyer un mail"></a>
             </div>
         </div>
     </div>
 
     <div class="container-photo">
-        <img src="./assets/img/ordi_brouillon_5.png" alt="Photo Chloé Fersing" id="photo-ordi">
+        <img src="./assets/img/boulette_papier.png" title="À propos" alt="Boulette de papier" class="hover-pointer"
+            id="boulette-papier">
+        <img src="./assets/img/fond_ordinateur.png" alt="Photo Chloé Fersing" id="fond">
+        <button class="btn-double-cercle pulse-animation hover-brillance" id="btn-a-propos" title="À propos"></button>
+        <button class="btn-double-cercle pulse-animation hover-brillance" id="btn-competences" title="Compétences"></button>
+        <button class="btn-double-cercle pulse-animation hover-brillance" id="btn-langues" title="Langues"></button>
+        <button class="btn-double-cercle pulse-animation hover-brillance" id="btn-parcours" title="Parcours"></button>
+        <button class="btn-double-cercle pulse-animation hover-brillance" id="btn-portfolio" title="Portfolio"></button>
+        <button class="btn-double-cercle pulse-animation hover-brillance" id="btn-ce-qui-me-passionne"
+            title="Ce qui me passionne"></button>
+        <img src="./assets/img/appareil_photo.png" title="Ce qui me passionne" class="hover-pointer penche"
+            alt="Appareil-photo" id="appareil-photo">
+
+
+
+
+
+
+
     </div>
 </body>
 

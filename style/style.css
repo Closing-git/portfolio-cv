@@ -1,3 +1,5 @@
+/* ------------------ FONT ------------------ */
+
 @font-face {
     font-family: Caveat;
     src: url('../assets/fonts/Caveat-Regular.ttf');
@@ -8,7 +10,94 @@
     src: url('../assets/fonts/MagazineLetterByBrntlbrnl-Regular.ttf');
 }
 
+/* ------------------ ANIMATIONS ------------------ */
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
 
+    50% {
+        opacity: 0.5;
+    }
+    
+    100% {
+        opacity: 1;
+    }
+}
+.pulse-animation {
+    animation: pulse 2.3s infinite ease-in-out;
+}
+
+
+@keyframes briller {
+    0% {
+        filter: brightness(100%);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+    }
+    50% {
+        filter: brightness(120%);
+        box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.8);
+    }
+    100% {
+        filter: brightness(100%);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+    }
+}
+
+.hover-brillance {
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.hover-brillance::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        to bottom right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.8) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    transform: rotate(30deg);
+    opacity: 0;
+    transition: all 0.6s ease;
+}
+
+.hover-brillance:hover {
+    animation: briller 1.5s ease-in-out;
+}
+
+.hover-brillance:hover::after {
+    opacity: 1;
+    left: 100%;
+}
+
+@keyframes penche {
+    0% {
+        transform: rotate(20deg);
+    }
+    100% {
+        transform: rotate(18deg) scale(1.02);
+    }
+}
+
+.penche:hover {
+    animation: penche 0.5s ease-out forwards;
+}
+
+
+
+/* ------------------ GLOBAL STYLES ------------------ */
+.hover-pointer {
+    cursor: pointer;
+}
+
+/* ------------------ BODY ------------------ */
 body {
     margin: 0;
     padding: 0;
@@ -18,6 +107,8 @@ body {
     background-color: #fff;
 
 }
+
+/* ------------------ NAV BAR ------------------ */
 
 .nav-bar {
     font-family: Caveat;
@@ -35,29 +126,271 @@ body {
     display: none;
 }
 
+.langues-et-burger {
+    margin-right: 4.5em;
+    margin-top: 0.5em;
+}
+
+/* -------- FR/ENG -------- */
+
+.choix-langues {
+    font-family: Caveat;
+    display: flex;
+    gap: 0.5em;
+    font-size: 1.5em;
+    margin-bottom: 0.3em;
+}
+
+#langue-selectionne {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.choix-langues a {
+    text-decoration: none;
+    color: black;
+}
+
+/* -------- BURGER MENU -------- */
+
 #burger-icon {
-    width: 45px;
+    width: 50px;
+    display: flex;
+    margin: auto;
     cursor: pointer;
 }
+
+
+/* -------- Fersing Chloé -------- */
 
 #name-title {
     font-family: MagazineLetter;
     font-size: 48px;
-    
+    display: flex;
+    gap: 3px;
+}
+
+#name-title span {
+    font-size: 1.5em;
+}
+
+#name-title span:nth-child(1) {
+    color: #015591;
+}
+
+#name-title span:nth-child(2) {
+    color: #136f63
+}
+
+#name-title span:nth-child(3) {
+    color: #f34213;
+}
+
+#name-title span:nth-child(4) {
+    color: #fa8e1a;
+}
+
+#name-title span:nth-child(5) {
+    color: #136f63;
+}
+
+#name-title span:nth-child(6) {
+    color: #f34213;
+}
+
+#name-title span:nth-child(7) {
+    color: #015591;
+}
+
+#name-title span:nth-child(8) {
+    color: #fa8e1a;
+}
+
+#name-title span:nth-child(9) {
+    color: #015591;
+}
+
+#name-title span:nth-child(10) {
+    color: #136f63;
+}
+
+#name-title span:nth-child(11) {
+    color: #f34213;
+}
+
+#name-title span:nth-child(12) {
+    color: #015591;
+}
+
+
+/* -------- Full-stack Junior Développeuse -------- */
+
+#job-title {
+    font-size: 2.5em;
+    transform: rotate(-8deg);
+    position: absolute;
+    top: 50%;
+    left: 32%;
+
+}
+
+/* -------- Post-it -------- */
+.post-it {
+    position: fixed;  
+    width: 350px;     
+    top: -8px;        
+    right: -15px;   
 }
 
 #post-it {
-    width: 250px;
+    width: 100%;      
+    height: auto;
+    transform: rotate(22deg); 
+    display: block;
+}
+.reseaux-sociaux{
     position: absolute;
-    top: 0px;
-    right: 0px;
-    rotate: 20deg;
+    width:100%;
+    top:42%;
+    right:-28%;
+    transform: rotate(23deg);
 }
 
-#photo-ordi {
-    height: 80vh;
+.btn-reseaux {
+    margin-right:0.7em;
+    width: 15%;
+    aspect-ratio: 1/1;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+#btn-linkedin {
+    background: url('../assets/img/linkedin.png') no-repeat center;
+        background-size: contain;
+}
+#btn-git {
+    background: url('../assets/img/github.png') no-repeat center;
+        background-size: contain;
+}
+#btn-CV {
+    background: url('../assets/img/CV.png') no-repeat center;
+        background-size: contain;
+}
+
+.ecrivez-moi {
+    display: flex;
+    border: none;
+    cursor: pointer;
+
+
+}
+.ecrivez-moi p {
     position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 46%;
+    right: 45%;
+    transform: rotate(12deg);
+    font-size: 1.8em;
+    white-space: nowrap;
+
+}
+#btn-mail {
+    transform: rotate(40deg);
+    width: 50px;
+    height: 100px;
+    position: absolute;
+    top: 65%;
+    right: 43%;
+    background: url('../assets/img/enveloppe_icon.png') no-repeat center;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+
+}
+
+/* ------------------ PHOTO BOULETTE APPAREIL PHOTO ------------------ */
+.container-photo {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: 10vh auto 0;
+}
+
+#boulette-papier,
+#appareil-photo {
+    position: absolute;
+    z-index: 1;
+}
+
+#boulette-papier {
+    width: 15%;
+    top: 8%;
+    left: -30%;
+}
+
+#appareil-photo {
+    width: 15%;
+    bottom: 40%;
+    left: 120%;
+    transform: rotate(20deg);
+}
+
+#fond {
+    width: 100%;
+    padding-top: 20%;
+    height: auto;
+    display: block;
+}
+
+/* ------------------ BOUTONS ------------------ */
+.btn-double-cercle {
+    position: absolute;
+    aspect-ratio: 1/1;
+    background: url('../assets/img/double_cercle.png') no-repeat center;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    transition: transform 0.3s ease;
+}
+
+
+#btn-a-propos {
+    top: 15%;
+    left: -22.5%;
+    width: 2.5%;
+
+}
+
+#btn-competences {
+    top: 28%;
+    left: 59.5%;
+    width: 1.3%;
+
+}
+
+#btn-langues {
+    top: 39%;
+    left: 63.8%;
+    width: 1.3%;
+}
+
+#btn-parcours {
+    top: 57%;
+    left: 92.5%;
+    width: 2%;
+}
+
+#btn-portfolio {
+    top: 29.8%;
+    left: 26.5%;
+    width: 2%;
+}
+
+#btn-ce-qui-me-passionne {
+    top: 51.65%;
+    left: 128.12%;
+    width: 1.7%;
 }
